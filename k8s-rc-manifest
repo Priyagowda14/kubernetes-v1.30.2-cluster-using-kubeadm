@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ReplicaController
+metadata:
+  name: myReplica
+spec:
+  replicas: 5
+  selector:
+    name: priya
+  template:
+    metadata:
+      name: testpod
+      labels:
+      name: priya
+spec:
+ containers:
+   - name: c1
+     image: nginx
